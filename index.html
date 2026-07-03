@@ -230,11 +230,12 @@ section { padding: 3.5rem 3rem; }
 }
 
 /* EXPERIENCE GALLERY */
-.exp-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+.exp-gallery { display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
 .exp-gallery-thumb {
   height: 100px; background: rgba(136,149,141,0.18);
   border-radius: 6px; cursor: pointer; overflow: hidden;
   transition: all 0.2s ease; border: 1px solid rgba(96,109,93,0.1);
+  position: relative;
 }
 .exp-gallery-thumb:hover {
   border-color: rgba(96,109,93,0.3);
@@ -244,6 +245,12 @@ section { padding: 3.5rem 3rem; }
 .exp-gallery-thumb-placeholder {
   width: 100%; height: 100%; display: flex; align-items: center;
   justify-content: center; font-size: 2rem;
+}
+.gallery-more-badge {
+  position: absolute; bottom: 0.5rem; right: 0.5rem;
+  background: rgba(96,109,93,0.9); color: #fff;
+  padding: 0.3rem 0.6rem; border-radius: 4px;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em;
 }
 
 /* GALLERY MODAL */
@@ -465,10 +472,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         <div class="exp-tags"><span class="tag">GenAI</span><span class="tag">Change management</span><span class="tag">Research</span><span class="tag">Stakeholder comms</span><span class="tag">Microsoft Copilot 365</span></div>
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'sandoz')">
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
       </div>
     </div>
     <div class="exp-item">
@@ -483,10 +487,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         <div class="exp-tags"><span class="tag">Qualitative research</span><span class="tag">Consumer insights</span><span class="tag">Thematic coding</span><span class="tag">Presentations</span></div>
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'beats')">
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
       </div>
     </div>
     <div class="exp-item">
@@ -501,10 +502,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         <div class="exp-tags"><span class="tag">Data analysis</span><span class="tag">HEOR</span><span class="tag">Pharma</span><span class="tag">Reporting</span></div>
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'novartis')">
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
       </div>
     </div>
     <div class="exp-item upcoming">
@@ -520,10 +518,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         <div class="exp-tags"><span class="tag">AI agents</span><span class="tag">Consulting</span><span class="tag">Training</span><span class="tag">Claude</span></div>
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'cataforma')" style="filter: opacity(0.6);">
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
       </div>
     </div>
   </div>
