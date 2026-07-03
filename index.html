@@ -149,7 +149,7 @@ section { padding: 3.5rem 3rem; }
 .experience { background: var(--bg-card); }
 .exp-list { display: flex; flex-direction: column; }
 .exp-item {
-  display: grid; grid-template-columns: 170px 1fr;
+  display: grid; grid-template-columns: 170px 1fr 180px;
   gap: 2.5rem; padding: 2rem 0;
   border-top: 0.5px solid rgba(46,53,44,0.1);
   align-items: start;
@@ -174,6 +174,7 @@ section { padding: 3.5rem 3rem; }
   padding-left: 3rem; padding-right: 3rem;
   border-top: 0.5px solid rgba(255,255,255,0.06);
   border-bottom: none;
+  grid-template-columns: 170px 1fr 180px;
 }
 .exp-item.upcoming .exp-company { color: var(--sage-light); }
 .exp-item.upcoming .exp-role { color: var(--bg); }
@@ -227,6 +228,55 @@ section { padding: 3.5rem 3rem; }
   border-radius: 2px; font-size: 0.7rem; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--dark);
 }
+
+/* EXPERIENCE GALLERY */
+.exp-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+.exp-gallery-thumb {
+  height: 100px; background: rgba(136,149,141,0.18);
+  border-radius: 6px; cursor: pointer; overflow: hidden;
+  transition: all 0.2s ease; border: 1px solid rgba(96,109,93,0.1);
+}
+.exp-gallery-thumb:hover {
+  border-color: rgba(96,109,93,0.3);
+  transform: scale(1.05);
+}
+.exp-gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.exp-gallery-thumb-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center;
+  justify-content: center; font-size: 2rem;
+}
+
+/* GALLERY MODAL */
+.gallery-modal {
+  display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85); z-index: 1000;
+  align-items: center; justify-content: center; padding: 2rem;
+}
+.gallery-modal.active { display: flex; }
+.gallery-modal-content {
+  background: var(--bg-card); border-radius: 8px; overflow: hidden;
+  max-width: 600px; width: 100%; display: flex; flex-direction: column;
+}
+.gallery-modal-image { width: 100%; height: 400px; background: rgba(136,149,141,0.18); overflow: hidden; }
+.gallery-modal-image img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-modal-nav {
+  padding: 1.5rem; display: flex; justify-content: space-between;
+  align-items: center; border-top: 1px solid rgba(96,109,93,0.1);
+}
+.gallery-modal-close {
+  position: absolute; top: 1rem; right: 1rem; background: none; border: none;
+  font-size: 1.8rem; cursor: pointer; color: #fff; width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+}
+.gallery-modal-close:hover { transform: scale(1.2); }
+.gallery-nav-btn {
+  background: var(--ebony); color: #fff; border: none; padding: 0.5rem 1rem;
+  border-radius: 4px; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;
+}
+.gallery-nav-btn:hover { background: var(--dark); }
+.gallery-nav-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.gallery-counter { font-size: 0.85rem; color: var(--muted); }
+
 
 /* CONTACT */
 .contact { background: var(--bg); text-align: center; padding: 4rem 3rem; }
@@ -414,6 +464,12 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         </ul>
         <div class="exp-tags"><span class="tag">GenAI</span><span class="tag">Change management</span><span class="tag">Research</span><span class="tag">Stakeholder comms</span><span class="tag">Microsoft Copilot 365</span></div>
       </div>
+      <div class="exp-gallery" onclick="openGallery(event, 'sandoz')">
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+      </div>
     </div>
     <div class="exp-item">
       <div><div class="exp-company">Beats by Dre</div><div class="exp-date">Feb to Mar 2024</div><div class="exp-location">Remote</div></div>
@@ -425,6 +481,12 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
           <li>Delivered a structured insight presentation with concrete marketing recommendations for the Beats team</li>
         </ul>
         <div class="exp-tags"><span class="tag">Qualitative research</span><span class="tag">Consumer insights</span><span class="tag">Thematic coding</span><span class="tag">Presentations</span></div>
+      </div>
+      <div class="exp-gallery" onclick="openGallery(event, 'beats')">
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
       </div>
     </div>
     <div class="exp-item">
@@ -438,6 +500,12 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         </ul>
         <div class="exp-tags"><span class="tag">Data analysis</span><span class="tag">HEOR</span><span class="tag">Pharma</span><span class="tag">Reporting</span></div>
       </div>
+      <div class="exp-gallery" onclick="openGallery(event, 'novartis')">
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+      </div>
     </div>
     <div class="exp-item upcoming">
       <div><div class="exp-company">Cataforma</div><div class="exp-date">Aug to Oct 2026</div><div class="exp-location">Prague, Czech Republic</div></div>
@@ -450,6 +518,12 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
           <li>Teaching the team to build and iterate on their own AI tools going forward</li>
         </ul>
         <div class="exp-tags"><span class="tag">AI agents</span><span class="tag">Consulting</span><span class="tag">Training</span><span class="tag">Claude</span></div>
+      </div>
+      <div class="exp-gallery" onclick="openGallery(event, 'cataforma')" style="filter: opacity(0.6);">
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div></div>
       </div>
     </div>
   </div>
@@ -540,5 +614,100 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
   <p>Madrid, Spain</p>
 </footer>
 
-</body>
-</html>
+<div id="sandozGallery" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGallery('sandoz')">✕</button>
+  <div class="gallery-modal-content">
+    <div class="gallery-modal-image"><img src="sandoz1.jpeg" alt="Sandoz 1"></div>
+    <div class="gallery-modal-nav">
+      <button class="gallery-nav-btn" onclick="prevPhoto('sandoz')">← Previous</button>
+      <span class="gallery-counter"><span id="sandozCurrent">1</span> / 4</span>
+      <button class="gallery-nav-btn" onclick="nextPhoto('sandoz')">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div id="beatsGallery" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGallery('beats')">✕</button>
+  <div class="gallery-modal-content">
+    <div class="gallery-modal-image"><img src="beats1.jpeg" alt="Beats 1"></div>
+    <div class="gallery-modal-nav">
+      <button class="gallery-nav-btn" onclick="prevPhoto('beats')">← Previous</button>
+      <span class="gallery-counter"><span id="beatsCurrent">1</span> / 4</span>
+      <button class="gallery-nav-btn" onclick="nextPhoto('beats')">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div id="novartisGallery" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGallery('novartis')">✕</button>
+  <div class="gallery-modal-content">
+    <div class="gallery-modal-image"><img src="novartis1.jpeg" alt="Novartis 1"></div>
+    <div class="gallery-modal-nav">
+      <button class="gallery-nav-btn" onclick="prevPhoto('novartis')">← Previous</button>
+      <span class="gallery-counter"><span id="novartissCurrent">1</span> / 4</span>
+      <button class="gallery-nav-btn" onclick="nextPhoto('novartis')">Next →</button>
+    </div>
+  </div>
+</div>
+
+<div id="cataformaGallery" class="gallery-modal">
+  <button class="gallery-modal-close" onclick="closeGallery('cataforma')">✕</button>
+  <div class="gallery-modal-content">
+    <div class="gallery-modal-image"><img src="cataforma1.jpeg" alt="Cataforma 1"></div>
+    <div class="gallery-modal-nav">
+      <button class="gallery-nav-btn" onclick="prevPhoto('cataforma')">← Previous</button>
+      <span class="gallery-counter"><span id="cataformaCurrent">1</span> / 4</span>
+      <button class="gallery-nav-btn" onclick="nextPhoto('cataforma')">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const galleries = {
+  sandoz: { current: 1, total: 4, modal: 'sandozGallery', counter: 'sandozCurrent' },
+  beats: { current: 1, total: 4, modal: 'beatsGallery', counter: 'beatsCurrent' },
+  novartis: { current: 1, total: 4, modal: 'novartisGallery', counter: 'novartissCurrent' },
+  cataforma: { current: 1, total: 4, modal: 'cataformaGallery', counter: 'cataformaCurrent' }
+};
+
+function openGallery(e, gallery) {
+  e.stopPropagation();
+  document.getElementById(galleries[gallery].modal).classList.add('active');
+}
+
+function closeGallery(gallery) {
+  document.getElementById(galleries[gallery].modal).classList.remove('active');
+}
+
+function nextPhoto(gallery) {
+  if (galleries[gallery].current < galleries[gallery].total) {
+    galleries[gallery].current++;
+    updateGalleryPhoto(gallery);
+  }
+}
+
+function prevPhoto(gallery) {
+  if (galleries[gallery].current > 1) {
+    galleries[gallery].current--;
+    updateGalleryPhoto(gallery);
+  }
+}
+
+function updateGalleryPhoto(gallery) {
+  const galleryData = galleries[gallery];
+  const img = document.querySelector(`#${galleryData.modal} img`);
+  const counter = document.getElementById(galleryData.counter);
+  img.src = gallery + galleryData.current + '.jpeg';
+  counter.textContent = galleryData.current;
+}
+
+// Close modal when clicking outside
+document.querySelectorAll('.gallery-modal').forEach(modal => {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+});
+</script>
+
