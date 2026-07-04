@@ -315,7 +315,7 @@ footer {
 footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 
 /* SERVICES */
-.services { background: var(--bg-mid); }
+.services { background: var(--dark); }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
 .service-card {
   background: var(--bg-card);
@@ -495,6 +495,22 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 <section class="experience" id="experience">
   <h2 class="section-title">Where I have worked</h2>
   <div class="exp-list">
+    <div class="exp-item upcoming">
+      <div><div class="exp-company">Cataforma</div><div class="exp-date">Aug to Oct 2026</div><div class="exp-location">Prague, Czech Republic</div></div>
+      <div>
+        <div class="upcoming-badge"><span class="upcoming-dot"></span> Up next</div>
+        <div class="exp-role">AI Consulting Trainee</div>
+        <ul style="font-size: 0.9rem; color: rgba(221,242,235,0.62); line-height: 1.8; margin-bottom: 0.8rem; margin-left: 1.2rem;">
+          <li>Intensive consulting training programme focused on AI applications in management consulting</li>
+          <li>Building personalised AI agents to develop and enhance Cataforma's startup operations</li>
+          <li>Teaching the team to build and iterate on their own AI tools going forward</li>
+        </ul>
+        <div class="exp-tags"><span class="tag">AI agents</span><span class="tag">Consulting</span><span class="tag">Training</span><span class="tag">Claude</span></div>
+      </div>
+      <div class="exp-gallery" onclick="openGallery(event, 'cataforma')" style="filter: opacity(0.6);">
+        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
+      </div>
+    </div>
     <div class="exp-item">
       <div><div class="exp-company">Sandoz</div><div class="exp-date">Jun to Dec 2025</div><div class="exp-location">Madrid, Spain</div></div>
       <div>
@@ -537,22 +553,6 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         <div class="exp-tags"><span class="tag">Data analysis</span><span class="tag">HEOR</span><span class="tag">Pharma</span><span class="tag">Reporting</span></div>
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'novartis')">
-        <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
-      </div>
-    </div>
-    <div class="exp-item upcoming">
-      <div><div class="exp-company">Cataforma</div><div class="exp-date">Aug to Oct 2026</div><div class="exp-location">Prague, Czech Republic</div></div>
-      <div>
-        <div class="upcoming-badge"><span class="upcoming-dot"></span> Up next</div>
-        <div class="exp-role">AI Consulting Trainee</div>
-        <ul style="font-size: 0.9rem; color: rgba(221,242,235,0.62); line-height: 1.8; margin-bottom: 0.8rem; margin-left: 1.2rem;">
-          <li>Intensive consulting training programme focused on AI applications in management consulting</li>
-          <li>Building personalised AI agents to develop and enhance Cataforma's startup operations</li>
-          <li>Teaching the team to build and iterate on their own AI tools going forward</li>
-        </ul>
-        <div class="exp-tags"><span class="tag">AI agents</span><span class="tag">Consulting</span><span class="tag">Training</span><span class="tag">Claude</span></div>
-      </div>
-      <div class="exp-gallery" onclick="openGallery(event, 'cataforma')" style="filter: opacity(0.6);">
         <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
       </div>
     </div>
