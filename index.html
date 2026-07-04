@@ -146,7 +146,7 @@ section { padding: 3.5rem 3rem; }
 .place-card.current .place-role { color: var(--ebony); }
 
 /* EXPERIENCE */
-.experience { background: var(--bg-card); }
+.experience { background: var(--bg); }
 .exp-list { display: flex; flex-direction: column; }
 .exp-item {
   display: grid; grid-template-columns: 170px 1fr 180px;
@@ -196,7 +196,7 @@ section { padding: 3.5rem 3rem; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
 /* PROJECTS */
-.projects { background: var(--bg); }
+.projects { background: var(--bg-card); }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
 .project-card { background: var(--bg-card); border-radius: 8px; overflow: hidden; border: 0.5px solid rgba(96,109,93,0.14); }
 .project-card-image {
@@ -349,10 +349,9 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#culture">Culture</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#passions">Life</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -360,7 +359,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="hero-eyebrow">Behavioural Science · AI · Strategy</div>
+    <div class="hero-eyebrow">Behavioural Science · AI · Consulting</div>
     <h1 class="hero-title">People,<br>patterns,<br>and <em>purpose.</em></h1>
     <p class="hero-tagline">I'm a behavioural science graduate with a multicultural upbringing and a deep curiosity about what makes people move.</p>
     <p class="hero-tagline-two">Increasingly focused on how AI tools can develop and enhance the way organisations and people work.</p>
@@ -395,7 +394,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
     <div class="service-card">
       <div class="service-image"><span style="font-size:2rem;">💼</span></div>
       <div class="service-card-body">
-        <div class="service-title">Strategy & Consulting</div>
+        <div class="service-title">Consulting</div>
         <p class="service-desc">Work on complex organisational challenges combining behavioural science, data, and practical problem-solving.</p>
       </div>
     </div>
@@ -453,6 +452,45 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 </section>
 
 
+
+<section class="projects" id="projects">
+  <h2 class="section-title">Work I am proud of</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="thesis.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center 35%;"></div>
+      <div class="project-card-body">
+        <div class="project-label">Research · IE University</div>
+        <div class="project-title">GenAI in the Workplace</div>
+        <p class="project-desc">Qualitative dissertation exploring how Generative AI is reshaping workplace behaviour. Based on ten expert interviews, thematically coded and synthesised into a structured analytical argument.</p>
+      </div>
+    </div>
+        <div class="project-card">
+      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="copilot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center center;"></div>
+      <div class="project-card-body">
+        <div class="project-label">Transformation & Training · Sandoz</div>
+        <div class="project-title">Copilot 365 Global Rollout</div>
+        <p class="project-desc">Co-designed and delivered a GenAI training programme across five global offices, reaching 250+ employees. Handled content design, coordination and facilitation end to end.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-image">📷 Add project image</div>
+      <div class="project-card-body">
+        <div class="project-label">Research · Beats by Dre</div>
+        <div class="project-title">Gen Z Consumer Insights</div>
+        <p class="project-desc">End-to-end primary research for Beats by Dre. Eight qualitative interviews, thematic analysis, and a final insight deck with three strategic recommendations.</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="graduate.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center center;"></div>
+      <div class="project-card-body">
+        <div class="project-label">Public Speaking· ISB</div>
+        <div class="project-title">Graduation Speaker</div>
+        <p class="project-desc">Presented the graduation speech at the International School of Basel, sharing insights and experiences from my academic journey and my graduating class of 2022.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="experience" id="experience">
   <h2 class="section-title">Where I have worked</h2>
@@ -516,45 +554,6 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       </div>
       <div class="exp-gallery" onclick="openGallery(event, 'cataforma')" style="filter: opacity(0.6);">
         <div class="exp-gallery-thumb" style="background:rgba(96,109,93,0.15);"><div class="exp-gallery-thumb-placeholder">📷</div><span class="gallery-more-badge">+3 more</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <h2 class="section-title">Work I am proud of</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="thesis.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center 35%;"></div>
-      <div class="project-card-body">
-        <div class="project-label">Research · IE University</div>
-        <div class="project-title">GenAI in the Workplace</div>
-        <p class="project-desc">Qualitative dissertation exploring how Generative AI is reshaping workplace behaviour. Based on ten expert interviews, thematically coded and synthesised into a structured analytical argument.</p>
-      </div>
-    </div>
-        <div class="project-card">
-      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="copilot.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center center;"></div>
-      <div class="project-card-body">
-        <div class="project-label">Transformation & Training · Sandoz</div>
-        <div class="project-title">Copilot 365 Global Rollout</div>
-        <p class="project-desc">Co-designed and delivered a GenAI training programme across five global offices, reaching 250+ employees. Handled content design, coordination and facilitation end to end.</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-card-image">📷 Add project image</div>
-      <div class="project-card-body">
-        <div class="project-label">Research · Beats by Dre</div>
-        <div class="project-title">Gen Z Consumer Insights</div>
-        <p class="project-desc">End-to-end primary research for Beats by Dre. Eight qualitative interviews, thematic analysis, and a final insight deck with three strategic recommendations.</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <div class="project-card-image" style="padding:0; overflow:hidden;"><img src="graduate.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center center;"></div>
-      <div class="project-card-body">
-        <div class="project-label">Public Speaking· ISB</div>
-        <div class="project-title">Graduation Speaker</div>
-        <p class="project-desc">Presented the graduation speech at the International School of Basel, sharing insights and experiences from my academic journey and my graduating class of 2022.</p>
-
       </div>
     </div>
   </div>
