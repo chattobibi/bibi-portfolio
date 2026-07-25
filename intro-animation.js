@@ -27,12 +27,12 @@
     const startX = window.innerWidth - 60;
     const startY = window.innerHeight - 60;
 
-    // Create an S-shaped curve path
-    // First curve goes up and to the left, second curve continues to target
-    const midX1 = window.innerWidth * 0.7;
-    const midY1 = window.innerHeight * 0.6;
-    const midX2 = window.innerWidth * 0.3;
-    const midY2 = window.innerHeight * 0.3;
+    // Create an S-shaped curve path that swoops around the first page
+    // First curve goes up and left, second curve continues to target
+    const midX1 = window.innerWidth * 0.75;
+    const midY1 = window.innerHeight * 0.7;
+    const midX2 = window.innerWidth * 0.25;
+    const midY2 = window.innerHeight * 0.2;
 
     const path = `M ${startX} ${startY} Q ${midX1} ${midY1} ${midX2} ${midY2} T ${targetX} ${targetY}`;
 
@@ -47,7 +47,7 @@
     // Create the timeline
     const timeline = gsap.timeline();
 
-    // Simple S-shaped flight animation
+    // Slow S-shaped flight animation - allow time to see it
     timeline.to(flyingBeeContainer, {
       motionPath: {
         path: path,
@@ -55,15 +55,15 @@
         autoRotate: true,
         alignOrigin: [0.5, 0.5]
       },
-      duration: 2.5,
+      duration: 4.5,
       ease: 'power1.inOut'
     });
 
     // Fade out as it lands
     timeline.to(flyingBeeContainer, {
       opacity: 0,
-      duration: 0.3
-    }, '-=0.2');
+      duration: 0.4
+    }, '-=0.3');
 
     // Clean up after animation
     timeline.eventCallback('onComplete', () => {
