@@ -89,6 +89,10 @@ nav {
 }
 .hero-cta:hover { background: var(--dark); }
 .hero-image-wrap { position: relative; height: 65vh; min-height: 420px; }
+.hero-image-eyebrow {
+  font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--sage); margin-bottom: 0.8rem;
+}
 .hero-photo-placeholder {
   width: 100%; height: 100%; background: rgba(136,149,141,0.2);
   border-radius: 4px 4px 100px 4px;
@@ -397,13 +401,14 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="hero-eyebrow">Behavioural Science · AI · Consulting</div>
-    <h1 class="hero-title">People,<br>patterns,<br>and <em>purpose.</em></h1>
+    <div class="hero-eyebrow"></div>
+    <h1 class="hero-title">People,<br>Patterns,<br><em>Purpose.</em></h1>
     <p class="hero-tagline">I'm a behavioural science graduate with a multicultural upbringing and a deep curiosity about what makes people move.</p>
     <p class="hero-tagline-two">Increasingly focused on how AI tools can develop and enhance the way organisations and people work.</p>
     <a href="#about" class="hero-cta">Discover more</a>
   </div>
   <div class="hero-image-wrap">
+    <div class="hero-image-eyebrow">Behavioural Science · AI · Consulting</div>
     <img src="hero.jpeg" style="width:100%; height:100%; object-fit:cover; border-radius: 4px 4px 100px 4px;">
     <div class="hero-accent-card">
       <div class="accent-card-label">Currently based in</div>
