@@ -252,13 +252,16 @@ section { padding: 3.5rem 3rem; min-height: 100vh; display: flex; flex-direction
   gap: 0.4rem; color: var(--sage); font-size: 0.8rem; overflow: hidden;
 }
 }
-.passion-photo:nth-child(1) .passion-placeholder { height: 100%; min-height: 530px; }
-.passion-photo:nth-child(4) .passion-placeholder { height: 100%; min-height: 530px; }
+.passion-photo:nth-child(1) .passion-placeholder { height: 100%; min-height: 530px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.passion-photo:nth-child(4) .passion-placeholder { height: 100%; min-height: 530px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .passion-label {
   position: absolute; bottom: 0.6rem; left: 0.6rem;
   background: rgba(221,242,235,0.92); padding: 0.25rem 0.6rem;
   border-radius: 2px; font-size: 0.7rem; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--dark);
+  text-transform: uppercase; color: var(--dark); z-index: 10;
+}
+.passion-photo:nth-child(1) .passion-label {
+  bottom: 0.4rem; left: 0.4rem; background: rgba(221,242,235,0.88);
 }
 
 /* EXPERIENCE GALLERY */
