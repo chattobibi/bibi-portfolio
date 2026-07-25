@@ -217,10 +217,11 @@ section { padding: 3.5rem 3rem; min-height: 100vh; display: flex; flex-direction
 .education-grid { display: grid; grid-template-columns: 1fr 2px 1fr; gap: 3rem; align-items: start; }
 .education-divider { background: var(--bg); }
 .education-item { display: flex; flex-direction: column; }
-.education-photo { margin-bottom: 1.5rem; order: -1; }
+.education-photo { width: 100%; height: 280px; margin-bottom: 1.5rem; order: -1; border-radius: 8px; overflow: hidden; }
+.education-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .education-photo-placeholder {
-  height: 280px; background: rgba(136,149,141,0.18);
-  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; background: rgba(136,149,141,0.18);
+  display: flex; align-items: center; justify-content: center;
   color: var(--sage); font-size: 2.5rem;
 }
 .education-header { margin-bottom: 1.5rem; }
@@ -617,7 +618,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
         </div>
       </div>
       <div class="education-photo">
-        <img src="iegrad.jpeg" alt="IE University" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; border-radius:8px;">
+        <img src="iegrad.jpeg" alt="IE University">
       </div>
     </div>
     <div class="education-divider"></div>
