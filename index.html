@@ -245,7 +245,6 @@ section { padding: 3.5rem 3rem; min-height: 100vh; display: flex; flex-direction
 .passions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
 .passion-photo { border-radius: 6px; overflow: hidden; position: relative; }
 .passion-photo:nth-child(1) { grid-row: span 3; }
-.passion-photo:nth-child(4) { grid-column: span 2; grid-row: span 3; }
 .passion-placeholder { position: relative;
   width: 100%; height: 240px; background: rgba(136,149,141,0.18);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -253,7 +252,6 @@ section { padding: 3.5rem 3rem; min-height: 100vh; display: flex; flex-direction
 }
 }
 .passion-photo:nth-child(1) .passion-placeholder { height: 100%; min-height: 440px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.passion-photo:nth-child(4) .passion-placeholder { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .passion-label {
   position: absolute; bottom: 0.6rem; left: 0.6rem;
   background: rgba(221,242,235,0.92); padding: 0.25rem 0.6rem;
@@ -677,8 +675,16 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       <div class="passion-label">Sport</div>
     </div>
     <div class="passion-photo">
-      <div class="passion-placeholder" style="height:240px; padding:0; overflow:hidden; border-radius:6px;"><span>📷</span><span>Family</span></div>
-      <div class="passion-label">Family & Friends</div>
+      <div class="passion-placeholder" style="padding:0; overflow:hidden;">
+        <span style="font-size:2.5rem;">👨‍👩‍👧‍👦</span>
+      </div>
+      <div class="passion-label">Family</div>
+    </div>
+    <div class="passion-photo">
+      <div class="passion-placeholder" style="padding:0; overflow:hidden;">
+        <span style="font-size:2.5rem;">👫</span>
+      </div>
+      <div class="passion-label">Friends</div>
     </div>
   </div>
 </section>
