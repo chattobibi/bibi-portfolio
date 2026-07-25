@@ -11,6 +11,7 @@
   --bg:         #DDF2EB;
   --bg-card:    #EEF7F3;
   --bg-mid:     #D3CDD7;
+  --cream:      #FAF8F5;
   --ebony:      #606D5D;
   --ebony-dark: #4A5648;
   --sage:       #88958D;
@@ -23,7 +24,7 @@
 }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
+  background: var(--cream);
   color: var(--dark);
   font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
@@ -36,7 +37,7 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1rem 3rem;
   display: flex; align-items: center; justify-content: space-between;
-  background: rgba(221,242,235,0.94);
+  background: rgba(250,248,245,0.94);
   backdrop-filter: blur(10px);
   border-bottom: 0.5px solid rgba(96,109,93,0.18);
 }
@@ -104,20 +105,22 @@ nav {
 .accent-card-value { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--dark); }
 
 /* SHARED */
-section { padding: 3.5rem 3rem; }
+section { padding: 3.5rem 3rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 .section-title {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 500; color: var(--dark);
   line-height: 1.2; margin-bottom: 2rem;
+  border-left: 4px solid var(--bg);
+  padding-left: 1rem;
 }
 
 /* ABOUT */
-.about { background: var(--bg-card); }
+.about { background: transparent; }
 .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 3.5rem; align-items: center; }
 .about-photo-placeholder {
   height: 380px; border-radius: 4px 80px 4px 4px;
-  overflow: hidden;
+  overflow: hidden; background: var(--bg);
 }
 .about-text p { font-size: 0.97rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.8; }
 .about-text p strong { color: var(--dark); font-weight: 500; }
@@ -130,7 +133,7 @@ section { padding: 3.5rem 3rem; }
 .culture { background: var(--bg); }
 .culture-intro { max-width: 580px; font-size: 0.97rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
 .culture-places { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-.place-card { background: var(--bg-card); border: 0.5px solid rgba(96,109,93,0.15); border-radius: 8px; overflow: hidden; }
+.place-card { background: var(--bg); border: 0.5px solid rgba(96,109,93,0.15); border-radius: 8px; overflow: hidden; }
 .place-photo {
   height: 140px; background: rgba(136,149,141,0.18);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -146,7 +149,7 @@ section { padding: 3.5rem 3rem; }
 .place-card.current .place-role { color: var(--ebony); }
 
 /* EXPERIENCE */
-.experience { background: var(--bg-card); }
+.experience { background: transparent; }
 .exp-list { display: flex; flex-direction: column; }
 .exp-item {
   display: grid; grid-template-columns: 170px 1fr 180px;
@@ -196,9 +199,9 @@ section { padding: 3.5rem 3rem; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
 /* PROJECTS */
-.projects { background: var(--bg); }
+.projects { background: transparent; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
-.project-card { background: var(--bg-card); border-radius: 8px; overflow: hidden; border: 0.5px solid rgba(96,109,93,0.14); }
+.project-card { background: var(--bg); border-radius: 8px; overflow: hidden; border: 0.5px solid rgba(96,109,93,0.14); }
 .project-card-image {
   height: 140px; background: rgba(136,149,141,0.18);
   display: flex; align-items: center; justify-content: center; color: var(--sage); font-size: 0.8rem;
@@ -209,7 +212,7 @@ section { padding: 3.5rem 3rem; }
 .project-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
 
 /* PASSIONS */
-.passions { background: var(--bg); }
+.passions { background: transparent; }
 .passions-intro { font-size: 0.97rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.8; }
 .passions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; }
 .passion-photo { border-radius: 6px; overflow: hidden; position: relative; }
@@ -286,7 +289,7 @@ section { padding: 3.5rem 3rem; }
 
 
 /* CONTACT */
-.contact { background: var(--bg-card); text-align: center; padding: 4rem 3rem; }
+.contact { background: transparent; text-align: center; padding: 4rem 3rem; }
 .contact-sub {
   font-size: 0.97rem; color: var(--muted); margin-bottom: 2rem;
   max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.7;
@@ -315,7 +318,7 @@ footer {
 footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 
 /* SERVICES */
-.services { background: var(--dark); }
+.services { background: transparent; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
 .service-card {
   background: var(--bg-card);
