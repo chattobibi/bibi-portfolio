@@ -357,7 +357,7 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
 
 /* SERVICES */
 .services { background: transparent; }
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .service-card {
   background: var(--bg-card);
   border: 0.5px solid rgba(96,109,93,0.14);
@@ -371,17 +371,16 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
   transform: translateY(-4px);
 }
 .service-image {
-  height: 80px; background: rgba(180,170,160,0.15);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--sage); font-size: 0.8rem; overflow: hidden;
-  border-bottom: 0.5px solid rgba(96,109,93,0.08);
+  display: none;
 }
-.service-card-body { padding: 1.4rem; }
-.service-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
-.service-title { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--dark); margin-bottom: 0.6rem; font-weight: 500; }
-.service-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-bottom: 0.9rem; }
-.service-details { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-.service-details li { margin-bottom: 0.5rem; margin-left: 1.1rem; }
+.service-card-body { padding: 2rem; }
+.service-title-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.service-title-row svg { flex-shrink: 0; }
+.service-icon { font-size: 2rem; margin-bottom: 0; display: block; }
+.service-title { font-family: 'Inter', sans-serif; font-size: 1.15rem; color: var(--dark); font-weight: 500; }
+.service-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
+.service-details { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+.service-details li { margin-bottom: 0.6rem; margin-left: 1.2rem; }
 </style>
 </head>
 <body>
@@ -425,9 +424,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
   <h2 class="section-title">What I can do for you</h2>
   <div class="services-grid">
     <div class="service-card">
-      <div class="service-image"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
       <div class="service-card-body">
-        <div class="service-title">AI Implementation</div>
+        <div class="service-title-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <div class="service-title">AI Implementation</div>
+        </div>
         <p class="service-desc">Help organisations design and roll out GenAI tools in ways that actually change how people work, not just in theory.</p>
         <ul class="service-details">
           <li>Assess readiness and identify high-impact use cases</li>
@@ -437,9 +438,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       </div>
     </div>
     <div class="service-card">
-      <div class="service-image"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
       <div class="service-card-body">
-        <div class="service-title">Facilitation</div>
+        <div class="service-title-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="service-title">Facilitation</div>
+        </div>
         <p class="service-desc">Facilitate workshops and meetings to drive alignment and decision-making.</p>
         <ul class="service-details">
           <li>Design and run strategic workshops for cross-functional teams</li>
@@ -449,9 +452,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       </div>
     </div>
     <div class="service-card">
-      <div class="service-image"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
       <div class="service-card-body">
-        <div class="service-title">Consulting</div>
+        <div class="service-title-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          <div class="service-title">Consulting</div>
+        </div>
         <p class="service-desc">Work on complex organisational challenges combining behavioural science, data, and practical problem-solving.</p>
         <ul class="service-details">
           <li>Diagnose root causes behind organisational friction or underperformance</li>
@@ -461,9 +466,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       </div>
     </div>
     <div class="service-card">
-      <div class="service-image"><svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1-2.5a6 6 0 0 0-9 0c.3.8.8 1.5 1 2.5"/><path d="M9 18h6"/><path d="M10 21h4"/></svg></div>
       <div class="service-card-body">
-        <div class="service-title">Research & Insights</div>
+        <div class="service-title-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" stroke="#88958D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1-2.5a6 6 0 0 0-9 0c.3.8.8 1.5 1 2.5"/><path d="M9 18h6"/><path d="M10 21h4"/></svg>
+          <div class="service-title">Research & Insights</div>
+        </div>
         <p class="service-desc">End-to-end qualitative and quantitative research to uncover what truly drives your audience's behaviour and decisions.</p>
         <ul class="service-details">
           <li>Design and execute mixed-method research projects (qual + quant)</li>
