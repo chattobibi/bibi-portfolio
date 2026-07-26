@@ -371,14 +371,17 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
   transform: translateY(-4px);
 }
 .service-image {
-  height: 160px; background: rgba(180,170,160,0.15);
+  height: 80px; background: rgba(180,170,160,0.15);
   display: flex; align-items: center; justify-content: center;
   color: var(--sage); font-size: 0.8rem; overflow: hidden;
+  border-bottom: 0.5px solid rgba(96,109,93,0.08);
 }
-.service-card-body { padding: 1.3rem; }
+.service-card-body { padding: 1.4rem; }
 .service-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
 .service-title { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: var(--dark); margin-bottom: 0.6rem; font-weight: 500; }
-.service-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+.service-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-bottom: 0.9rem; }
+.service-details { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.service-details li { margin-bottom: 0.5rem; margin-left: 1.1rem; }
 </style>
 </head>
 <body>
@@ -426,6 +429,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       <div class="service-card-body">
         <div class="service-title">AI Implementation</div>
         <p class="service-desc">Help organisations design and roll out GenAI tools in ways that actually change how people work, not just in theory.</p>
+        <ul class="service-details">
+          <li>Assess readiness and identify high-impact use cases</li>
+          <li>Co-design implementation roadmaps with leadership teams</li>
+          <li>Build internal capability and drive adoption across teams</li>
+        </ul>
       </div>
     </div>
     <div class="service-card">
@@ -433,6 +441,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       <div class="service-card-body">
         <div class="service-title">Facilitation</div>
         <p class="service-desc">Facilitate workshops and meetings to drive alignment and decision-making.</p>
+        <ul class="service-details">
+          <li>Design and run strategic workshops for cross-functional teams</li>
+          <li>Create psychological safety and encourage diverse perspectives</li>
+          <li>Transform discussion into actionable next steps and decisions</li>
+        </ul>
       </div>
     </div>
     <div class="service-card">
@@ -440,6 +453,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       <div class="service-card-body">
         <div class="service-title">Consulting</div>
         <p class="service-desc">Work on complex organisational challenges combining behavioural science, data, and practical problem-solving.</p>
+        <ul class="service-details">
+          <li>Diagnose root causes behind organisational friction or underperformance</li>
+          <li>Synthesise research and data into clear, actionable recommendations</li>
+          <li>Support implementation and measure impact of solutions</li>
+        </ul>
       </div>
     </div>
     <div class="service-card">
@@ -447,6 +465,11 @@ footer p { font-size: 0.76rem; color: rgba(221,242,235,0.28); }
       <div class="service-card-body">
         <div class="service-title">Research & Insights</div>
         <p class="service-desc">End-to-end qualitative and quantitative research to uncover what truly drives your audience's behaviour and decisions.</p>
+        <ul class="service-details">
+          <li>Design and execute mixed-method research projects (qual + quant)</li>
+          <li>Conduct interviews, surveys, and behavioural analysis</li>
+          <li>Deliver insights decks with clear strategic recommendations</li>
+        </ul>
       </div>
     </div>
   </div>
